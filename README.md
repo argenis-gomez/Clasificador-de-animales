@@ -10,7 +10,7 @@ imagen fue clasificada correctamente.
 
 ---
 
-## Construido del proyecto
+## Construcción del proyecto
 
 Para este proyecto se utilizaron las siguientes herramientas:
 
