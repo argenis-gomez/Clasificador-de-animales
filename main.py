@@ -1,13 +1,6 @@
 import streamlit as st
 import SessionState
-from utils import process_image, load_model
-
-
-def return_prediction(image, model):
-    image = process_image(image, img_shape=IMG_SHAPE)
-    prediction = model.predict(image)[0][0]
-
-    return prediction
+from utils import load_model, return_prediction
 
 
 def main(model):
@@ -34,14 +27,7 @@ def main(model):
             session_state.pred_button = True
 
         if session_state.pred_button:
-            prediction = return_prediction(session_state.uploaded_image, model)
-
-            if prediction > .5:
-                label = 'Perro'
-                prob = prediction * 100
-            else:
-                label = 'Gato'
-                prob = (1 - prediction) * 100
+            label, prob = return_prediction(session_state.uploaded_image, model, IMG_SHAPE)
 
             st.write(f"Su predicción es {prob:2.2f}% {label}")
 
@@ -60,7 +46,7 @@ def main(model):
 
 
 if __name__ == '__main__':
-    IMG_SHAPE = (64, 64)
-    MODEL = load_model('model_acc90.h5')
+    IMG_SHAPE = (224, 224)
+    MODEL = load_model('model_efficienttetb0.h5')
 
     main(MODEL)

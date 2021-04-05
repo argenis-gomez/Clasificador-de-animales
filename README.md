@@ -2,7 +2,7 @@
 
 # Clasificador de animales
 
-Utilizando una Red Neuronal Convolucional se creó un clasificador de animales.
+Utilizando una arquitectura EfficientNetB0 se desarrolló un clasificador de animales.
 
 Se creó una plataforma que permite cargar imágenes de animales y clasificarlas.
 La plataforma tiene un sistema de feedback que permite al usuario verificar si la 
@@ -60,9 +60,9 @@ _Repitiendo este proceso, podrá clasificar todas las imágenes que desee._
 
 ## Comentarios finales
 
-* Actualmente el clasificador solo funciona con imágenes de perros y gatos, 
-  se planea a futuro seguir entrenando el modelo para predecir otros tipos de
-  animales.
+* Actualmente el clasificador solo funciona con 10 tipos de animales (Perros, Gatos, Mariposas,
+  Ardillas, Arañas, Vacas, Elefantes, Gallinas, Ovejas y Caballos).Se planea a futuro seguir 
+  entrenando el modelo para predecir otros tipos de animales.
   
 * El mecanismo de feedback no guarda las nuevas imágenes dadas por el usuario, 
   se planea a futuro implementar un mejor mecanismo que permita almacenar las nuevas
